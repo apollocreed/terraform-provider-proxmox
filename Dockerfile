@@ -18,7 +18,6 @@ RUN apk update --no-cache && \
                                 wget
 
 WORKDIR /terraform
-ADD main.tf /terraform
 ENV GOPATH /terraform
 RUN  mkdir plugins &&\
      export TF_PLUGIN_CACHE_DIR="/terraform/plugins" &&\
