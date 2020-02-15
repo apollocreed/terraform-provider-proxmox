@@ -26,6 +26,8 @@ RUN  mkdir plugins &&\
      go get github.com/Telmate/terraform-provider-proxmox/cmd/terraform-provisioner-proxmox &&\
      mv $GOPATH/bin/terraform-provider-proxmox /terraform/plugins         &&\
      mv $GOPATH/bin/terraform-provisioner-proxmox /terraform/plugins       &&\
+     chmod 750 /terraform/plugins/terraform-provider-proxmox                  &&\
+     chmod 750 /terraform/plugins/terraform-provisioner-proxmox                  &&\
      terraform providers                &&\
      unset http_proxy                                                                       &&\
      unset https_proxy
