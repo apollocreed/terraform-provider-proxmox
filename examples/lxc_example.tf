@@ -1,10 +1,3 @@
-provider "proxmox" {
-    pm_tls_insecure = true
-    pm_api_url = "https://proxmox.org/api2/json"
-    pm_password = "supersecret"
-    pm_user = "terraform-user@pve"
-    pm_otp = ""
-}
 
 resource "proxmox_lxc" "lxc-test" {
     features {
